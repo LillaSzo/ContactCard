@@ -19,7 +19,7 @@ p {
     font-style: Italic;
 }
 
-.business-card {
+.contact-card {
     width: 300px;
     background-color: #CEB2FF;
     padding: 20px;
@@ -29,6 +29,33 @@ p {
     text-align: center;
     font-size: 16px;
     border-radius: 15px;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 1s;
+}
+
+.card.is-flipped {
+    transform: rotateY(-180deg);
+}
+
+.card-front,
+.card-back {
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
 }
 
 .profile-image {
